@@ -12,37 +12,10 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
+
   gtag('config', 'G-71NYPWF5M9');
 
-  // Função para obter parâmetros da URL
-  function getQueryParams() {
-    var params = {};
-    var queryString = window.location.search.substring(1);
-    var regex = /([^&=]+)=([^&]*)/g;
-    var m;
-    while (m = regex.exec(queryString)) {
-      params[decodeURIComponent(m[1])] = decodeURIComponent(m[2]);
-    }
-    return params;
-  }
-
-  // Captura os parâmetros de campanha
-  var campaignParams = getQueryParams();
-
-  // Envia os parâmetros de campanha para o Google Analytics
-  gtag('event', 'conversion', {
-    'send_to': 'G-71NYPWF5M9',
-    'utm_source': campaignParams['utm_source'],
-    'utm_medium': campaignParams['utm_medium'],
-    'utm_campaign': campaignParams['utm_campaign']
-  });
-
-  // Redireciona para o site do Trailhead da Salesforce após um pequeno atraso para garantir que os dados sejam enviados
-  setTimeout(function() {
-    window.location.href = "https://trailhead.salesforce.com/pt-BR";
-  }, 1000); // 1 segundo de atraso
-</script>
-
+  window.location.href = "https://trailhead.salesforce.com/pt-BR"
 </script>
 <body>
     
